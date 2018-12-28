@@ -11,30 +11,37 @@ let game = {
     'correct': 0,
     'incorrect': 0,
 
-    'answer_correctly': ()=>{game.correct++},
-    'answer_incorrectly': ()=>{game.incorrect++},
-
     'submit_answer': ()=>{
         event.preventDefault()
-        console.log($("#player_answer").val()==game.current_answer)
+        if($("#player_answer").val()==game.current_answer){
+            game.correct++
+        }
+        else{
+            game.incorrect++
+        }
         game.new_question()
     },
 
     'new_question':()=>{
         event.preventDefault()
-        $("#display").empty()
-        $("#answer").empty()
-        $("#question").empty()
+        let ddiv = $("#display")
+        let adiv = $("#answer")
+        let qdiv = $("#question")
         
+        ddiv.empty()
+        adiv.empty()
+        qdiv.empty()
+
+        ddiv.append(`Right: ${game.correct}`, "<br>")
+        ddiv.append(`Wrong: ${game.incorrect}`, "<br>")
+
         const rand = Math.floor(Math.random()*(4))
         
         game.current_question = (game[game.current_difficulty][rand]);
         game.current_answer = eval(game.current_question)
         
-        let qdiv = $("#question")
         qdiv.append(game.current_question)
         
-        let adiv = $("#answer")
         let form = $("<input>").attr("type","text").attr("id","player_answer")
         let btn = $("<button>").html("submit").on("click",game.submit_answer)
         adiv.append(form).append("<br>").append(btn)
@@ -42,7 +49,6 @@ let game = {
         $("#player_answer").focus()
        
     }
-    
 }
 
 //Test to make sure the questions can be evaluated into number answers
