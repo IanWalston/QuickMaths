@@ -1,5 +1,6 @@
 /* everything */
 * {
+    margin: 16px;
     box-sizing: border-box;
     text-align:center;
 }
@@ -15,13 +16,14 @@ h1{
     font-size:6em;
 }
 p{
-    line-height:1.6em
+    line-height:1.6em;
+    font-size:1em
 }
 button{
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 16px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -44,6 +46,6 @@ button{
     padding: 1em;
 }
 #wrapper{
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 600
 }

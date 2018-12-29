@@ -1,8 +1,8 @@
 let game = {
 
-    'easy': ['1+1+1', '1*(1+1)', '(1-1)*(1+1)', '(1-1)+(1+1)','1-1-1-1','(1+1-1)*1'],
-    'medium': ['1+1-1-1+1', '(1*(1+1))*(1-1)+1', '(1+1)*(1-((1+1)*1))', '(1+1) / (1-(1+1+1))'],
-    'hard': ['1+1+1+1-1+1-1-1', '(2*(1+2))*(1-2)+1', '2*(1+2)-2*(2-1)+2-1', '((2+1)-2) / ((2-1)+2+1+1)'],
+    'easy': ['1+1+1', '1*(1+1)', '(1-1)*(1+1)', '(1-1)+(1+1)', '1-1-1-1', '(1+1-1)*1', '(1/1)+(1*1)', '(1+1)+(1+1)', '((1*(1-1)+1))'],
+    'medium': ['1+1-1-1+1', '(1*(1+1))*(1-1)+1', '(1+1)*(1-((1+1)*1))', '(1+1) / (1-(1+1+1))', '1+1-1+1-1+1', '(1+1)-(1-1)-(1+1)'],
+    'hard': ['1+1+1+1-1+1-1-1', '(2*(1+2))*(1-2)+1', '2*(1+2)-2*(2-1)+2-1', '((2+1)-2) / ((2-1)+2+1+1)', '2*(1+2)+1*(2+1)-1', '((1+2)/(2-1))+1-2'],
 
     'current_difficulty': 'easy',
     'current_question': null,
@@ -11,34 +11,33 @@ let game = {
     'correct': 0,
     'incorrect': 0,
 
-    'submit_answer': ()=>{
+    'submit_answer': () => {
         event.preventDefault()
-        if($("#player_answer").val()==eval(game.current_answer)){
+        if ($("#player_answer").val() == eval(game.current_answer)) {
             game.correct++
-            if(game.correct==3){
+            if (game.correct == 3) {
                 game.current_difficulty = 'medium'
             }
-            if (game.correct==6){
+            if (game.correct == 6) {
                 game.current_difficulty = 'hard'
             }
-            if (game.correct==9){
+            if (game.correct == 9) {
                 game.win()
             }
 
-            
         }
-        else{
+        else {
             game.incorrect++
         }
         game.new_question()
     },
 
-    'new_question':()=>{
+    'new_question': () => {
         event.preventDefault()
         let ddiv = $("#display")
         let adiv = $("#answer")
         let qdiv = $("#question")
-        
+
         ddiv.empty()
         adiv.empty()
         qdiv.empty()
@@ -46,21 +45,23 @@ let game = {
         ddiv.append(`Right: ${game.correct}`, "<br>")
         ddiv.append(`Wrong: ${game.incorrect}`, "<br>")
 
-        const rand = Math.floor(Math.random()*(4))
-        
+        const rand = Math.floor(Math.random() * (4))
+
         game.current_question = (game[game.current_difficulty][rand]);
         game.current_answer = eval(game.current_question)
-        
+
         qdiv.append(game.current_question)
-        
-        let form = $("<input>").attr("type","text").attr("id","player_answer")
-        let btn = $("<button>").html("submit").on("click",game.submit_answer)
+
+        let form = $("<input>").attr("type", "text").attr("id", "player_answer")
+        let btn = $("<button>").html("submit").on("click", game.submit_answer)
         adiv.append(form).append("<br>").append(btn)
-        
+
         $("#player_answer").focus()
-       
     },
-    win : console.log("balls")
+    
+    "start": () => { game.new_question() },
+
+    "win": console.log("balls")
 }
 
 //Test to make sure the questions can be evaluated into number answers
@@ -77,15 +78,19 @@ const testQuestions = () => {
 
 //set game initial conditions
 let initiate = () => {
-    
+
     let btn = $("<button>")
     btn.html("Start")
-    btn.on("click", game.new_question)
-    
+    btn.on("click", game.start)
+
     let div = $("#display")
     div.append("Evaluate the expressions")
     div.append("<br>")
     div.append(btn)
+
+    let p = $("<p>").css("font-size", "0.6em")
+    p.html("Use the enter key to submit answers. All answers must be in decimal form.")
+    div.append(p)
 }
 
 testQuestions()

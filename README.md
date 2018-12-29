@@ -4,7 +4,8 @@
 
 ## GWU Winter-Break Homework
 
-A quick game of evaluating expressions involving adding, subtracting, multiplying, and diving a bunch of 1s and 2s together. 
+A quick game of evaluating expressions involving adding, subtracting, multiplying, and diving a bunch of 1s and 2s together.
+For every 3 you get right, the problems get harder. Get 9 right to win. Get 3 wrong to lose. 
 
 ### Why should I get good at "mental math?"
 
