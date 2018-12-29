@@ -1,6 +1,6 @@
 let game = {
 
-    'easy': ['1+1+1', '1*(1+1)', '(1-1)*(1+1)', '(1-1)+(1+1)'],
+    'easy': ['1+1+1', '1*(1+1)', '(1-1)*(1+1)', '(1-1)+(1+1)','1-1-1-1','(1+1-1)*1'],
     'medium': ['1+1-1-1+1', '(1*(1+1))*(1-1)+1', '(1+1)*(1-((1+1)*1))', '(1+1) / (1-(1+1+1))'],
     'hard': ['1+1+1+1-1+1-1-1', '(2*(1+2))*(1-2)+1', '2*(1+2)-2*(2-1)+2-1', '((2+1)-2) / ((2-1)+2+1+1)'],
 
@@ -13,8 +13,19 @@ let game = {
 
     'submit_answer': ()=>{
         event.preventDefault()
-        if($("#player_answer").val()==game.current_answer){
+        if($("#player_answer").val()==eval(game.current_answer)){
             game.correct++
+            if(game.correct==3){
+                game.current_difficulty = 'medium'
+            }
+            if (game.correct==6){
+                game.current_difficulty = 'hard'
+            }
+            if (game.correct==9){
+                game.win()
+            }
+
+            
         }
         else{
             game.incorrect++
@@ -48,7 +59,8 @@ let game = {
         
         $("#player_answer").focus()
        
-    }
+    },
+    win : console.log("balls")
 }
 
 //Test to make sure the questions can be evaluated into number answers
