@@ -150,6 +150,9 @@ const testQuestions = () => {
 
 //set game initial conditions
 const initiate = () => {
+    time = "63"
+    tdiv.html("time: " + time)
+
     game.current_difficulty = 'easy'
     game.current_question = null
     game.current_answer = null
