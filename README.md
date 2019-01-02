@@ -32,11 +32,3 @@ Even though mental math is just a series of cheap tricks, some people think bein
 
 
 My favorite part of this game is that the answers to the expressions are evaluated by javascript and are not hardcoded into the program. This lets me add to the problem set without solving the new problems, as well as blame the eval() function if there are any disagreemenets on what an answer to a problem should have been. 
-
-
-
-
-
-sounds
-colors
-showing wrong at end
