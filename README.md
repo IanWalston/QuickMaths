@@ -25,8 +25,7 @@ Get good at math to shave seconds off of the millions of situations where you'll
 
 #### Impress people
 
-Even though mental math is just a series of cheap tricks, some people think being good at mental math means your smart. Make one wrong move and you'll come across as an idiot, so take the time to become flawless.
-
+Even though mental math is just a series of cheap tricks, some people think being good at mental math means your smart. Make one wrong move and you'll come across as a fool, so take the time to become flawless.
 
 
 
