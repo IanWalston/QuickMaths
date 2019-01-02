@@ -21,7 +21,7 @@ Keep your brain sharp by practicing math.
 
 #### Save time in the future
 
-Get good at math to shave seconds off of the millions of situations in the future where you'll be doing short calculations throughout your life. 
+Get good at math to shave seconds off of the millions of situations where you'll be doing simple calculations throughout your life. 
 
 #### Impress people
 
@@ -32,3 +32,11 @@ Even though mental math is just a series of cheap tricks, some people think bein
 
 
 My favorite part of this game is that the answers to the expressions are evaluated by javascript and are not hardcoded into the program. This lets me add to the problem set without solving the new problems, as well as blame the eval() function if there are any disagreemenets on what an answer to a problem should have been. 
+
+
+
+
+
+sounds
+colors
+showing wrong at end

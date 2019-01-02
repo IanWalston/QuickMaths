@@ -1,6 +1,6 @@
 /* everything */
 * {
-    margin: 16px;
+    margin: 32px;
     box-sizing: border-box;
     text-align:center;
 }
@@ -29,6 +29,9 @@ button{
     display: inline-block;
     font-size: 16px
 }
+form{
+    display:inline;
+}
 
 /* classes */
 .container{
@@ -37,6 +40,7 @@ button{
 .thick-container{
     padding:64px 80px;
 }
+
 
 /* ids */
 #navbar{
@@ -47,5 +51,15 @@ button{
 }
 #wrapper{
     font-size: 2em;
-    font-weight: 600
+    font-weight: 600;
+    padding:64px 128px;
+    padding-top:0;
 }
+#player_answer{
+    padding: 16px;
+    width: 64px;
+    height: 64px;
+    color: blue;
+    font-size: 40px;
+}
+
