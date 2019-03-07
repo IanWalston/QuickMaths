@@ -4,11 +4,11 @@ let qdiv = $("#question");
 let tdiv = $("#time");
 
 let time = "63";
-tdiv.html("time: " + time);
+tdiv.html("Time: " + time);
 
 const tick = () => {
   time--;
-  tdiv.html("time: " + time);
+  tdiv.html("Time: " + time);
   if (time == 0) {
     tdiv.html("out of time");
     game.end();
@@ -100,9 +100,7 @@ let game = {
     ddiv.append(`Right: ${game.correct}`, "<br>");
     ddiv.append(`Wrong: ${game.incorrect}`, "<br>");
 
-    let rand = Math.floor(
-      Math.random() * (game[game.current_difficulty].length)
-    );
+    let rand = Math.floor(Math.random() * game[game.current_difficulty].length);
 
     game.current_question = game[game.current_difficulty][rand];
     game.current_answer = eval(game.current_question);
@@ -121,8 +119,8 @@ let game = {
       .append(btn);
 
     $("#player_answer").focus();
-    
-    game[game.current_difficulty].splice(rand, 1)
+
+    game[game.current_difficulty].splice(rand, 1);
   },
 
   start: () => {
@@ -140,6 +138,7 @@ let game = {
     } else {
       ddiv.append("Try Again");
       let btn = $("<button>");
+      btn.addClass("hexagon");
       btn.html("Start");
       btn.on("click", initiate);
       ddiv.append(btn);
