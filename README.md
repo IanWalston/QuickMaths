@@ -2,8 +2,6 @@
 
 ***"Two plus two is four, minus one that's three, quick maths" - Big Shaq***
 
-## GWU Winter-Break Homework
-
 A quick game of evaluating expressions involving adding, subtracting, multiplying, and diving a bunch of 1s and 2s together.
 For every 3 you get right, the problems get harder. Get 9 right to win. Get 3 wrong to lose. 
 
@@ -13,7 +11,7 @@ There are lots of reasons you should want to be good at math, other than the obv
 
 #### Standardized Tests
 
-SAT, ACT, GED, GRE, certificates, other stuff like that. None of them are all mental math, but being able to do those parts flawlessly and quickly really free's up your time to think about the more complicated bits
+SAT, ACT, GED, GRE, certificates, other stuff like that. None of them are all mental math, but being able to do those parts flawlessly and quickly really frees up your time to think about the more complicated bits
 
 #### Staving off dementia
 
@@ -25,7 +23,7 @@ Get good at math to shave seconds off of the millions of situations where you'll
 
 #### Impress people
 
-Even though mental math is just a series of cheap tricks, some people think being good at mental math means your smart. Make one wrong move and you'll come across as a fool, so take the time to become flawless.
+Even though mental math is just a series of cheap tricks, some people think being good at mental math means you're smart. Make one wrong move and you'll come across as a fool, so take the time to become flawless.
 
 
 
